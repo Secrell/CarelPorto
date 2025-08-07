@@ -30,81 +30,117 @@ export default function ContactPage() {
           {/* Centered Contact Information */}
           <div className="max-w-2xl mx-auto space-y-8">
             {/* Contact Information */}
-            <Card className="border-0 shadow-lg bg-white/80 backdrop-blur-sm">
+            <Card className={`border-0 shadow-lg backdrop-blur-sm ${
+              isDarkMode ? 'bg-gray-800/80' : 'bg-white/80'
+            }`}>
               <CardHeader className="text-center">
-                <CardTitle className="text-2xl">Contact Information</CardTitle>
-                <CardDescription>
+                <CardTitle className={`text-2xl ${
+                  isDarkMode ? 'text-white' : 'text-gray-900'
+                }`}>Contact Information</CardTitle>
+                <CardDescription className={
+                  isDarkMode ? 'text-gray-300' : 'text-gray-600'
+                }>
                   Feel free to reach out through any of these channels
                 </CardDescription>
               </CardHeader>
-              <CardContent className="space-y-6">
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-100 to-red-100 rounded-lg flex items-center justify-center">
-                    <Mail className="w-6 h-6 text-blue-600" />
+              <CardContent className="space-y-4">
+                <div className="flex items-center space-x-4 p-3 rounded-lg transition-colors hover:bg-gray-50 dark:hover:bg-gray-700">
+                  <div className="w-10 h-10 bg-gradient-to-br from-blue-100 to-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Mail className="w-5 h-5 text-blue-600" />
                   </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900">Email</h3>
-                    <p className="text-gray-600">kareledgar17@gmail.com</p>
-                  </div>
-                </div>
-
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-100 to-red-100 rounded-lg flex items-center justify-center">
-                    <Phone className="w-6 h-6 text-red-600" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900">Phone</h3>
-                    <p className="text-gray-600">+62895618356242</p>
+                  <div className="min-w-0 flex-1">
+                    <h3 className={`font-semibold ${
+                      isDarkMode ? 'text-white' : 'text-gray-900'
+                    }`}>Email</h3>
+                    <p className={`text-sm break-all ${
+                      isDarkMode ? 'text-gray-300' : 'text-gray-600'
+                    }`}>kareledgar17@gmail.com</p>
                   </div>
                 </div>
 
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-100 to-red-100 rounded-lg flex items-center justify-center">
-                    <MapPin className="w-6 h-6 text-blue-600" />
+                <div className="flex items-center space-x-4 p-3 rounded-lg transition-colors hover:bg-gray-50 dark:hover:bg-gray-700">
+                  <div className="w-10 h-10 bg-gradient-to-br from-blue-100 to-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Phone className="w-5 h-5 text-red-600" />
                   </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900">Location</h3>
-                    <p className="text-gray-600">President University, Indonesia</p>
+                  <div className="min-w-0 flex-1">
+                    <h3 className={`font-semibold ${
+                      isDarkMode ? 'text-white' : 'text-gray-900'
+                    }`}>Phone</h3>
+                    <p className={`text-sm ${
+                      isDarkMode ? 'text-gray-300' : 'text-gray-600'
+                    }`}>+62895618356242</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center space-x-4 p-3 rounded-lg transition-colors hover:bg-gray-50 dark:hover:bg-gray-700">
+                  <div className="w-10 h-10 bg-gradient-to-br from-blue-100 to-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <MapPin className="w-5 h-5 text-blue-600" />
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <h3 className={`font-semibold ${
+                      isDarkMode ? 'text-white' : 'text-gray-900'
+                    }`}>Location</h3>
+                    <p className={`text-sm ${
+                      isDarkMode ? 'text-gray-300' : 'text-gray-600'
+                    }`}>President University, Indonesia</p>
                   </div>
                 </div>
               </CardContent>
             </Card>
 
             {/* Social Media */}
-            <Card className="border-0 shadow-lg bg-white/80 backdrop-blur-sm">
+            <Card className={`border-0 shadow-lg backdrop-blur-sm ${
+              isDarkMode ? 'bg-gray-800/80' : 'bg-white/80'
+            }`}>
               <CardHeader className="text-center">
-                <CardTitle className="text-2xl">Connect With Me</CardTitle>
-                <CardDescription>
+                <CardTitle className={`text-2xl ${
+                  isDarkMode ? 'text-white' : 'text-gray-900'
+                }`}>Connect With Me</CardTitle>
+                <CardDescription className={
+                  isDarkMode ? 'text-gray-300' : 'text-gray-600'
+                }>
                   Follow me on social media for updates and insights
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="flex space-x-4">
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                   <a 
                     href="https://www.instagram.com/edgarcarel/" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="flex-1 inline-flex items-center justify-center px-6 py-3 text-sm font-medium border border-gray-300 rounded-md text-gray-700 bg-white hover:bg-gray-50 hover:border-gray-400 transition-colors"
+                    className={`flex-1 inline-flex items-center justify-center px-4 py-3 text-sm font-medium rounded-md transition-colors ${
+                      isDarkMode 
+                        ? 'border border-gray-600 text-gray-300 bg-gray-700 hover:bg-gray-600 hover:border-gray-500'
+                        : 'border border-gray-300 text-gray-700 bg-white hover:bg-gray-50 hover:border-gray-400'
+                    }`}
                   >
-                    <Instagram className="w-5 h-5 mr-2" />
+                    <Instagram className="w-4 h-4 mr-2" />
                     Instagram
                   </a>
                   <a 
                     href="https://www.linkedin.com/in/careledgar/" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="flex-1 inline-flex items-center justify-center px-6 py-3 text-sm font-medium border border-gray-300 rounded-md text-gray-700 bg-white hover:bg-gray-50 hover:border-gray-400 transition-colors"
+                    className={`flex-1 inline-flex items-center justify-center px-4 py-3 text-sm font-medium rounded-md transition-colors ${
+                      isDarkMode 
+                        ? 'border border-gray-600 text-gray-300 bg-gray-700 hover:bg-gray-600 hover:border-gray-500'
+                        : 'border border-gray-300 text-gray-700 bg-white hover:bg-gray-50 hover:border-gray-400'
+                    }`}
                   >
-                    <Linkedin className="w-5 h-5 mr-2" />
+                    <Linkedin className="w-4 h-4 mr-2" />
                     LinkedIn
                   </a>
                   <a 
                     href="https://github.com/Secrell" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="flex-1 inline-flex items-center justify-center px-6 py-3 text-sm font-medium border border-gray-300 rounded-md text-gray-700 bg-white hover:bg-gray-50 hover:border-gray-400 transition-colors"
+                    className={`flex-1 inline-flex items-center justify-center px-4 py-3 text-sm font-medium rounded-md transition-colors ${
+                      isDarkMode 
+                        ? 'border border-gray-600 text-gray-300 bg-gray-700 hover:bg-gray-600 hover:border-gray-500'
+                        : 'border border-gray-300 text-gray-700 bg-white hover:bg-gray-50 hover:border-gray-400'
+                    }`}
                   >
-                    <Github className="w-5 h-5 mr-2" />
+                    <Github className="w-4 h-4 mr-2" />
                     GitHub
                   </a>
                 </div>
@@ -113,18 +149,28 @@ export default function ContactPage() {
           </div>
 
           {/* Additional Information */}
-          <div className="mt-16 bg-white/50 p-8 rounded-2xl text-center">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Let's Work Together</h3>
-            <p className="text-gray-600 max-w-2xl mx-auto mb-6">
+          <div className={`mt-12 p-6 sm:p-8 rounded-2xl text-center ${
+            isDarkMode ? 'bg-gray-800/50' : 'bg-white/50'
+          }`}>
+            <h3 className={`text-xl sm:text-2xl font-bold mb-4 ${
+              isDarkMode ? 'text-white' : 'text-gray-900'
+            }`}>Let's Work Together</h3>
+            <p className={`max-w-2xl mx-auto mb-6 text-sm sm:text-base ${
+              isDarkMode ? 'text-gray-300' : 'text-gray-600'
+            }`}>
               Whether you have a project in mind, want to collaborate, or just want to say hello, 
               I'd love to hear from you. I'm always excited to work on new challenges and 
               contribute to innovative solutions.
             </p>
-            <div className="flex justify-center space-x-4">
+            <div className="flex justify-center">
               <a 
                 href="/cv/CV_CAREL EDGAR NAPITUPULU.pdf" 
                 download="CV_CAREL_EDGAR_NAPITUPULU.pdf"
-                className="inline-flex items-center justify-center px-6 py-3 text-sm font-medium border border-gray-300 rounded-md text-gray-700 bg-white hover:bg-gray-50 hover:border-gray-400 transition-colors"
+                className={`inline-flex items-center justify-center px-6 py-3 text-sm font-medium rounded-md transition-colors ${
+                  isDarkMode 
+                    ? 'border border-gray-600 text-gray-300 bg-gray-700 hover:bg-gray-600 hover:border-gray-500'
+                    : 'border border-gray-300 text-gray-700 bg-white hover:bg-gray-50 hover:border-gray-400'
+                }`}
               >
                 Download CV
               </a>
