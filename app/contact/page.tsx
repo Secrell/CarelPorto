@@ -105,7 +105,7 @@ export default function ContactPage() {
               <CardContent>
                 <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                   <a 
-                    href="https://wa.me/6289561835624" 
+                    href="https://wa.me/62895618356242" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className={`flex-1 inline-flex items-center justify-center px-4 py-3 text-sm font-medium rounded-md transition-colors ${
