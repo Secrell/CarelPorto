@@ -1,6 +1,6 @@
 'use client'
 
-import { Mail, Phone, MapPin, Instagram, Linkedin, Github } from 'lucide-react'
+import { Mail, Phone, MapPin, MessageCircle, Linkedin, Github } from 'lucide-react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../../components/ui/card'
 import { useTheme } from '../../lib/theme-context'
 
@@ -105,7 +105,7 @@ export default function ContactPage() {
               <CardContent>
                 <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                   <a 
-                    href="https://www.instagram.com/edgarcarel/" 
+                    href="https://wa.me/6289561835624" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className={`flex-1 inline-flex items-center justify-center px-4 py-3 text-sm font-medium rounded-md transition-colors ${
@@ -114,8 +114,8 @@ export default function ContactPage() {
                         : 'border border-gray-300 text-gray-700 bg-white hover:bg-gray-50 hover:border-gray-400'
                     }`}
                   >
-                    <Instagram className="w-4 h-4 mr-2" />
-                    Instagram
+                    <MessageCircle className="w-4 h-4 mr-2" />
+                    WhatsApp
                   </a>
                   <a 
                     href="https://www.linkedin.com/in/careledgar/" 

@@ -37,8 +37,7 @@ export default function ToolsPage() {
       title: "Design & UI/UX",
       tools: [
         { name: "Figma", description: "UI/UX design and prototyping" },
-        { name: "Canva", description: "Graphic design and visual content" },
-        { name: "Adobe Photoshop", description: "Image editing and manipulation" }
+        { name: "Canva", description: "Graphic design and visual content" }
       ]
     },
     {

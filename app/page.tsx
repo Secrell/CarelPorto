@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Code, Cpu, Globe, Palette, Mail, Instagram, Linkedin, Github, Download, ExternalLink, Star, Coffee, Zap } from 'lucide-react'
+import { Code, Cpu, Globe, Palette, Mail, Linkedin, Github, Download, ExternalLink, Star, Coffee, Zap } from 'lucide-react'
 import { useTheme } from '../lib/theme-context'
 
 export default function HomePage() {
@@ -45,7 +45,7 @@ export default function HomePage() {
   const stats = [
     { icon: <Code className="w-6 h-6" />, number: "30+", label: "Projects Completed" },
     { icon: <Coffee className="w-6 h-6" />, number: "999+", label: "Cups of Coffee" },
-    { icon: <Star className="w-6 h-6" />, number: "3.5", label: "GPA Achievement" },
+    { icon: <Star className="w-6 h-6" />, number: "3.33", label: "GPA Achievement" },
     { icon: <Zap className="w-6 h-6" />, number: "24/7", label: "Learning Mode" }
   ]
 

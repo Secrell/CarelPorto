@@ -18,7 +18,7 @@ export default function SkillsPage() {
       icon: <Palette className="w-8 h-8" />,
       title: "UI/UX Design",
       description: "Designing intuitive and user-friendly interfaces with modern design principles",
-      technologies: ["Figma", "Canva","Adobe Photoshop"]
+      technologies: ["Figma", "Canva"]
     },
     {
       icon: <Cpu className="w-8 h-8" />,
