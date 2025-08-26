@@ -54,19 +54,22 @@ export default function HomePage() {
       title: "Smart Attendance System",
       description: "Arduino-based attendance automation with sensor monitoring and data logging on websites",
       tech: "Arduino, MQTT, MySQL, Microcontroller, Sensors, VsCode, HTML, CSS, JavaScript",
-      status: "Completed"
+      status: "Completed",
+      link: null
     },
     {
       title: "Digital Twin for Final Assembly",
       description: "Arduino-based digital twin system for real-time monitoring and control the workers on the assembly line websites",
       tech: "Arduino, MQTT, MySQL, Microcontroller, Sensors, VsCode, HTML, CSS, JavaScript",
-      status: "In Progress"
+      status: "In Progress",
+      link: null
     },
     {
-      title: "Smart Garden System",
-      description: "Website for monitoring and controlling garden sensors on websites",
-      tech: "ESP32, React, Arduino, JavaScript, HTML, CSS, Microcontroller, MQTTX",
-      status: "Planning"
+      title: "Online Course Website",
+      description: "Modern web platform for online learning with interactive features and responsive design",
+      tech: "Next.js, React, JavaScript, HTML, CSS, Tailwind, Vercel",
+      status: "Completed",
+      link: "https://web-kursus-online.vercel.app/"
     }
   ]
 
@@ -213,7 +216,9 @@ export default function HomePage() {
                 isDarkMode 
                   ? 'bg-gray-800 border-gray-700' 
                   : 'bg-white border-gray-100'
-              }`}>
+              } ${project.link ? 'cursor-pointer transform hover:scale-105' : ''}`}
+              onClick={() => project.link && window.open(project.link, '_blank')}
+              >
                 <div className="flex items-center justify-between mb-4">
                   <span className={`px-3 py-1 rounded-full text-xs font-medium ${
                     project.status === 'Completed' ? 'bg-green-100 text-green-800' :
@@ -223,9 +228,13 @@ export default function HomePage() {
                     {project.status}
                   </span>
                   <ExternalLink className={`w-4 h-4 transition-colors ${
-                    isDarkMode 
-                      ? 'text-gray-500 group-hover:text-blue-400' 
-                      : 'text-gray-400 group-hover:text-blue-500'
+                    project.link
+                      ? isDarkMode 
+                        ? 'text-blue-400 group-hover:text-blue-300' 
+                        : 'text-blue-500 group-hover:text-blue-600'
+                      : isDarkMode 
+                        ? 'text-gray-500' 
+                        : 'text-gray-400'
                   }`} />
                 </div>
                 <h3 className={`text-lg font-bold mb-2 ${
@@ -234,7 +243,16 @@ export default function HomePage() {
                 <p className={`text-sm mb-4 ${
                   isDarkMode ? 'text-gray-300' : 'text-gray-600'
                 }`}>{project.description}</p>
-                <div className="text-xs text-blue-600 font-medium">{project.tech}</div>
+                <div className="flex items-center justify-between">
+                  <div className="text-xs text-blue-600 font-medium">{project.tech}</div>
+                  {project.link && (
+                    <span className={`text-xs font-medium ${
+                      isDarkMode ? 'text-blue-400' : 'text-blue-600'
+                    }`}>
+                      Click to visit →
+                    </span>
+                  )}
+                </div>
               </div>
             ))}
           </div>
