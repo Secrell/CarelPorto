@@ -70,6 +70,13 @@ export default function HomePage() {
       tech: "Next.js, React, JavaScript, HTML, CSS, Tailwind, Vercel",
       status: "Completed",
       link: "https://web-kursus-online.vercel.app/"
+    },
+    {
+      title: "Go Career Application",
+      description: "Professional career application platform with modern UI and comprehensive job management features",
+      tech: "Next.js, React, TypeScript, Tailwind CSS, Vercel",
+      status: "Completed",
+      link: "https://go-career-application.vercel.app/"
     }
   ]
 
@@ -210,7 +217,7 @@ export default function HomePage() {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             {featuredProjects.map((project, index) => (
               <div key={index} className={`rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border group ${
                 isDarkMode 
